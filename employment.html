@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="favicons/favicon.ico" type="image/x-icon">
+</head>
+
+
+<head>
+    <title>Jake's Website</title>
+    <!-- The following pattern defers CSS loading, making page load much faster -->
+    <link rel="preload" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+    </noscript>
+    <link rel="stylesheet" type="text/css" href="cv.css">
+    <link rel="stylesheet" type="text/css" href="nav.css">
+    <!-- Use FontAwesome for (most) icons -->
+    <script src="https://kit.fontawesome.com/2a7f8c9d6d.js" defer crossorigin="anonymous"></script>
+    <!-- Use AcademicIcons for Google Scholar and Semantic Scholar icons -->
+    <!-- The following pattern defers CSS loading, making page load much faster -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    </noscript>
+    <script src="logic.js" defer></script>
+    <script src="no-transition-on-resize.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img id="me" loading=lazy alt="A photo of Jake" src="images-responses/jake_sexy.png">
+            <a href="#jake" class="custom-link">Jake Lockitch</a>
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation bar">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" aria-label="home">
+                        <i class="fa-solid fa-house" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">About Me</a>
+                </li>
+                <li>
+                    <a href="education.html">Education</a>
+                </li>
+                <li>
+                    <a href="media.html">Media</a>
+                </li>
+                <li>
+                    <a href="employment.html">Employment</a>
+                </li>
+                <li>
+                    <a href="hobbies.html">Hobbies</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="Pong.html">Challenge</a>
+                </li>
+                <li>
+                    <a href="mailto:jakelockitch@gmail.com" aria-label="email">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span>
+                <i class="fa fa-bars fa-lg"></i>
+            </span>
+        </label>
+    </header>
+    <div id="page-wrap">
+        <div class="clear"></div>
+        <div class="clear"></div>
+        <div>
+            <div>
+                <h1 id="about">Employment Page</h1>
+            </div>
+
+
+            <div class="center-content">
+                <p>I am currently unemployed but am looking at doing CO-OP next semester to
+                    gain some real world experience and to FULL this page up to the brim!!
+
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="center-content">
+                <form id="surveyForm" action="#">
+                    <h2>Would YOU like to employ me?</h2>
+                    <h4>If so fill out this short survey<h4>
+                            <br>
+
+                            <label for="companyName">Company Name:</label>
+                            <br>
+                            <input type="text" id="companyName" name="companyName" required>
+
+                            <br>
+                            <br>
+                            <label for="contactName">Contact Name:</label>
+                            <br>
+
+                            <input type="text" id="contactName" name="contactName" required>
+
+                            <br>
+                            <br>
+                            <label for="contactNo">Contact Number:</label>
+                            <br>
+                            <input type="text" id="contactNo">
+
+                            <br>
+                            <br>
+
+                            <label for="electronicMail">Email:</label><br>
+                            <input type="electronicMail" id="electronicMail" name="electronicMail" required>
+
+                            <br>
+                            <br>
+                            <label for="yesNo">Are you looking for the most amazing Employee you could possibly ask
+                                for?</label><br><br>
+                            <input type="radio" id="yes" name="yesNo" value="yes" required>
+                            <label for="yes">Yes</label><br>
+                            <input type="radio" id="no" name="yesNo" value="no">
+                            <label for="no">No</label><br>
+                            <br>
+                            <label for="job-description">Job Description:</label><br>
+                            <textarea id="job-description" name="job-description" rows="10" cols="50">
+                            </textarea>
+                            <br>
+                            <br>
+                            <label for="score">On a scale from 1 to 10, how awesome is my website?</label><br>
+                            <input type="range" id="score" name="score" min="1" max="10" required>
+                            <br>
+                            <span id="scoreValue"></span>
+                            <br>
+                            <br>
+                            <button type="submit">Submit</button>
+                </form>
+                </divd>
+
+
+                <script>
+                    var form = document.getElementById('surveyForm');
+                    form.addEventListener('submit', function (e) {
+                        e.preventDefault();
+                        if (document.getElementById('yes').checked) {
+                            window.confirm('Thank you for wanting to hire me! I\'ll get back to you in 2/3 working days.');
+                        }
+                        form.reset();
+                    });
+
+                    var scoreSlider = document.getElementById('score');
+                    var scoreValueDisplay = document.getElementById('scoreValue');
+
+                    scoreSlider.addEventListener('input', function () {
+                        scoreValueDisplay.textContent = scoreSlider.value;
+                    });
+
+                </script>
+</body>
+
+</html>
+<div class="clear"></div>

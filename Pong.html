@@ -1,0 +1,128 @@
+<!-- note: I did not write this code. I found it on github and am taking absolutely 
+    no credit for it. I just thought it would be a cool thing to have in my website-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="favicons/favicon.ico" type="image/x-icon">
+</head>
+
+
+<head>
+
+
+    
+    <title>Jake's Website</title>
+
+    <!-- The following pattern defers CSS loading, making page load much faster -->
+    <link rel="preload" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+
+    <link rel="stylesheet" type="text/css" href="cv.css">
+    <link rel="stylesheet" type="text/css" href="nav.css">
+    <!-- Use FontAwesome for (most) icons -->
+    <script src="https://kit.fontawesome.com/2a7f8c9d6d.js" defer crossorigin="anonymous"></script>
+    <!-- Use AcademicIcons for Google Scholar and Semantic Scholar icons -->
+    <!-- The following pattern defers CSS loading, making page load much faster -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    </noscript>
+    <script src="logic.js" defer></script>
+    <script src="no-transition-on-resize.js" defer></script>
+
+</head>
+
+<header>
+    <div class="logo">
+        <img id="me" loading=lazy alt="A photo of Jake" src="images-responses/jake_sexy.png">
+        <a href="#jake" class="custom-link">Jake Lockitch</a>
+    </div>
+    
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation bar">
+    <nav>
+        <ul>
+            <li>
+                <a href="#" aria-label="home">
+                    <i class="fa-solid fa-house" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="index.html">About Me</a>
+            </li>
+            <li>
+                <a href="education.html">Education</a>
+            </li>
+            <li>
+                <a href="media.html">Media</a>
+            </li>
+            <li>
+                <a href="employment.html">Employment</a>
+            </li>
+            <li>
+                <a href="hobbies.html">Hobbies</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+            <li>
+                <a href="Pong.html">Challenge</a>
+            </li>
+            <a href="mailto:jakelockitch@gmail.com" aria-label="email">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            </a>
+            </li>
+        </ul>
+    </nav>
+    <label for="nav-toggle" class="nav-toggle-label">
+        <span>
+            <i class="fa fa-bars fa-lg"></i>
+        </span>
+    </label>
+</header>
+
+
+<body style="font-family: 'Kodchasan', sans-serif;">
+
+</body>
+
+<div id="page-wrap">
+    <div class="clear"></div>
+    <div class="clear"></div>
+
+    <div>
+
+        <div class="center-content">
+            <h1>Try to beat Pong</h1>
+
+            <canvas></canvas>
+
+            <h2>CONTROLS</h2>
+            <p>"W" to move up</p>
+            <p>"S" to move down</p>
+            <p>OR</p>
+            <p>"↑" to move up</p>
+            <p>"↓" to move down</p>
+            <script src="Pong.js"></script>
+            <p>In order to win the AI must NOT score a single goal. 
+                Every time you score the AI becomes increasing better and 
+                the ball gets faster and faster until you beat the game. Good luck! </p>
+        </div>
+
+
+        <!-- prevents scrolling when playing - super annoying when it happened -->
+        <script>
+            window.addEventListener('keydown', function(e) {
+                if(['ArrowUp','ArrowDown'].includes(e.key)) {
+                    e.preventDefault();
+                }
+            });
+        </script>
+        
+
+
+        </body>
+
+</html>

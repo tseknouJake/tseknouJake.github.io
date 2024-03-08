@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="favicons/favicon.ico" type="image/x-icon">
+</head>
+
+
+<head>
+
+    <title>Jake's Website</title>
+
+    <!-- The following pattern defers CSS loading, making page load much faster -->
+    <link rel="preload" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+
+    <link rel="stylesheet" type="text/css" href="cv.css">
+    <link rel="stylesheet" type="text/css" href="nav.css">
+    <!-- Use FontAwesome for (most) icons -->
+    <script src="https://kit.fontawesome.com/2a7f8c9d6d.js" defer crossorigin="anonymous"></script>
+    <!-- Use AcademicIcons for Google Scholar and Semantic Scholar icons -->
+    <!-- The following pattern defers CSS loading, making page load much faster -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    </noscript>
+    <script src="logic.js" defer></script>
+    <script src="no-transition-on-resize.js" defer></script>
+
+</head>
+
+<body>
+
+
+    <header>
+        <div class="logo">
+            <img id="me" loading=lazy alt="A photo of Jake" src="images-responses/jake_sexy.png">
+            <a href="#jake" class="custom-link">Jake Lockitch</a>
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation bar">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" aria-label="home">
+                        <i class="fa-solid fa-house" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">About Me</a>
+                </li>
+                <li>
+                    <a href="education.html">Education</a>
+                </li>
+                <li>
+                    <a href="media.html">Media</a>
+                </li>
+                <li>
+                    <a href="employment.html">Employment</a>
+                </li>
+                <li>
+                    <a href="hobbies.html">Hobbies</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="Pong.html">Challenge</a>
+                </li>
+                <a href="mailto:jakelockitch@gmail.com" aria-label="email">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                </a>
+                </li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span>
+                <i class="fa fa-bars fa-lg"></i>
+            </span>
+        </label>
+    </header>
+    <div id="page-wrap">
+        <div class="clear"></div>
+        <div class="clear"></div>
+
+        <div class="center-content">
+            <h1 id="about">About Me</h1>
+            <div>
+                I am Jake and I love HTML. I'm from Cape Town, South Africa if you want to see what my home city looks
+                like click <a id="myLink" href="#capetown" onclick="toggleImage(event)">here.</a> This whole website
+                is about me so you will get to know me by exploring it! But this is just a brief introduction.
+            </div>
+            <!-- Set the initial opacity to 0 -->
+            <img id="myImage" src="images-responses/cape-town.jpg" alt="Cape Town"
+                style="opacity: 0; transition: opacity 2.5s;">
+        </div>
+
+        <div class="center-content">
+            <p> I am a student at <a href="https://www.runi.ac.il/en" target="_blank">Reichman University</a> in Israel.
+                I
+                am in my second year of studying a BSc in Computer Science and am loving living in Israel.
+                My whole family still lives in South Africa. I always love going back home to Cape Town to visit all my
+                family and
+                friends. I am a very active person and I love to surf and skateboard. I hope you enjoy my website!
+            </p>
+        </div>
+
+        <div class="clear"></div>
+
+
+        <script>
+            function toggleImage(event) {
+                event.preventDefault();  // Prevent the link from navigating to another page
+                // Select the image by its id
+                var image = document.getElementById('myImage');
+                // If the current opacity is 0, change it to 1, otherwise change it to 0
+                image.style.opacity = image.style.opacity == '0' ? '1' : '0';
+            }
+        </script>
+</body>
+
+</html>

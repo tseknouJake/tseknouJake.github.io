@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="favicons/favicon.ico" type="image/x-icon">
+</head>
+
+
+
+<head>
+
+
+   
+    <title>Jake's Website</title>
+    <!-- The following pattern defers CSS loading, making page load much faster -->
+    <link rel="preload" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+
+    <link rel="stylesheet" type="text/css" href="cv.css">
+    <link rel="stylesheet" type="text/css" href="nav.css">
+    <!-- Use FontAwesome for (most) icons -->
+    <script src="https://kit.fontawesome.com/2a7f8c9d6d.js" defer crossorigin="anonymous"></script>
+    <!-- Use AcademicIcons for Google Scholar and Semantic Scholar icons -->
+    <!-- The following pattern defers CSS loading, making page load much faster -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    </noscript>
+    <script src="logic.js" defer></script>
+    <script src="no-transition-on-resize.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img id="me" loading=lazy alt="A photo of Jake" src="images-responses/jake_sexy.png">
+            <a href="#jake" class="custom-link">Jake Lockitch</a>
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation bar">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" aria-label="home">
+                        <i class="fa-solid fa-house" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">About Me</a>
+                </li>
+                <li>
+                    <a href="education.html">Education</a>
+                </li>
+                <li>
+                    <a href="media.html">Media</a>
+                </li>
+                <li>
+                    <a href="employment.html">Employment</a>
+                </li>
+                <li>
+                    <a href="hobbies.html">Hobbies</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="Pong.html">Challenge</a>
+                </li>
+                <a href="mailto:jakelockitch@gmail.com" aria-label="email">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                </a>
+                </li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span>
+                <i class="fa fa-bars fa-lg"></i>
+            </span>
+        </label>
+    </header>
+    <div id="page-wrap">
+        <div class="clear"></div>
+        <div class="clear"></div>
+
+        <div class="center-content">
+            <h1 id="about">Education</h1>
+            <div>
+                <br>
+                <h2> My Education</h2>
+
+                <div>
+                    <p> I went to school at <a href="https://www.herzlia.com/enrolments/high-school/"
+                            target="_blank">Herzlia High School</a> in Cape Town, South Africa.
+                        I went here my whoole school career and I made the most amazing friends there. I actually miss
+                        school and home a lot. (never though I would miss school). Now I am studying Computer Science at
+                        Reichman University in Israel.
+                    </p>
+
+                </div>
+                <br>
+                <!-- shows a list of high school subject final grades -->
+                <h2> Subjects Taken At High School and Grades</h2>
+                <p>English Home Language – 79%
+                    <br>
+                    Afrikaans First Additional Language – 80%
+                    <br>
+                    Mathematics – 84%
+                    <br>
+                    Life Orientation – 90%
+                    <br>
+                    Information Technology (IT) – 91%
+                    <br>
+                    Life Sciences (Biology) – 77%
+                    <br>
+                    Physical Sciences (Physics & Chemistry) – 83%
+                    <br>
+                    <br>
+                    Overall average – 83.4% (A – highest level of achievement)
+                </p>
+            </div>
+
+            <div>
+                <br>
+                <!-- uses javascript to toggle a PDF viewer in the browser -->
+                <h2> My University</h2>
+                <p> I am a Computer Science student at Reichman
+                    University. Here is my grade Transcript (I know its not amazing, but I'm working on it):
+                    <br>
+                    <button id="toggleGrades">Toggle Grade Transcript</button>
+                <div id="GradesContainer" style="display: none;">
+                    <embed src="PDFs/Grade transcript 1st year.pdf" type="application/pdf" width="100%"
+                        height="600px" />
+                </div>
+
+                <br>
+                <h2> My CV</h2>
+
+                <p> Attached is my CV/Resume if you would like to see it click "Toggle CV" below. In it is all my 
+                    awards, achievements, all my work experience and all my skills.
+                    </p>
+                <button id="toggleCvButton">Toggle CV</button>
+
+                <div id="cvContainer" style="display: none;">
+                    <embed src="PDFs/Jake lockitch CV.pdf" type="application/pdf" width="100%" height="600px" />
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="clear"></div>
+
+
+        <script>
+            function toggleImage(event) {
+                event.preventDefault();  // Prevent the link from navigating to another page
+                // Select the image by its id
+                var image = document.getElementById('myImage');
+                // If the current opacity is 0, change it to 1, otherwise change it to 0
+                image.style.opacity = image.style.opacity == '0' ? '1' : '0';
+            }
+
+
+
+            document.getElementById('toggleGrades').addEventListener('click', function () {
+                var cvContainer = document.getElementById('GradesContainer');
+                if (cvContainer.style.display === 'none') {
+                    cvContainer.style.display = 'block';
+                } else {
+                    cvContainer.style.display = 'none';
+                }
+            });
+
+            document.getElementById('toggleCvButton').addEventListener('click', function () {
+                var cvContainer = document.getElementById('cvContainer');
+                if (cvContainer.style.display === 'none') {
+                    cvContainer.style.display = 'block';
+                } else {
+                    cvContainer.style.display = 'none';
+                }
+            });
+        </script>
+
+
+
+
+</body>
+
+</html>
