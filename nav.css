@@ -26,11 +26,17 @@
     display: center;
     text-align: center;
 }
+
 .center-content a {
   display: default;
 }
 
 
+#myImage {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 .hobby-images {
   display: block;
