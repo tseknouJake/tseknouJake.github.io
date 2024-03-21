@@ -34,50 +34,58 @@
 
 
     <header>
-            <div class="logo">
-                <img id="me" loading=lazy alt="A photo of Jake" src="images-responses/jake_sexy.png">
-                <a href="#jake" class="custom-link">Jake Lockitch</a>
-            </div>
-            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation bar">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#" aria-label="home">
-                            <i class="fa-solid fa-house" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="index.html">About Me</a>
-                    </li>
-                    <li>
-                        <a href="education.html">Education</a>
-                    </li>
-                    <li>
-                        <a href="media.html">Media</a>
-                    </li>
-                    <li>
-                        <a href="employment.html">Employment</a>
-                    </li>
-                    <li>
-                        <a href="hobbies.html">Hobbies</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                    <li>
-                        <a href="Pong.html">Challenge</a>
-                    </li>
-                    <a href="mailto:jakelockitch@gmail.com" aria-label="email">
-                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        <div class="logo">
+            <img id="me" loading=lazy alt="A photo of Jake" src="images-responses/jake_sexy.png">
+            <a href="index.html" class="custom-link">Jake Lockitch</a>
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation bar">
+
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li>
+                    <a href="#" aria-label="home">
+                        <i class="fa-solid fa-house" aria-hidden="true"></i>
                     </a>
-                    </li>
-                </ul>
-            </nav>
-            <label for="nav-toggle" class="nav-toggle-label">
-                <span>
-                    <i class="fa fa-bars fa-lg"></i>
-                </span>
-            </label>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a href="education.html" class="nav-link">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a href="media.html" class="nav-link">Media</a>
+                </li>
+                <li class="nav-item">
+                    <a href="employment.html" class="nav-link">Employment</a>
+                </li>
+                <li class="nav-item">
+                    <a href="hobbies.html" class="nav-link">Hobbies</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Pong.html" class="nav-link">Challenge</a>
+                </li>
+
+                <a href="mailto:jakelockitch@gmail.com" aria-label="email">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                </a>
+                </li>
+            </ul>
+            <!-- <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div> -->
+
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span>
+                <i class="fa fa-bars fa-lg"></i>
+            </span>
+        </label>
     </header>
     <div id="page-wrap">
         <div class="clear"></div>
@@ -86,7 +94,8 @@
         <div class="center-content">
             <h1 id="about">About Me</h1>
             <div>
-                I am Jake and I am loving learning about and playing with HTML. I'm from Cape Town, South Africa if you want to see what Cape Town looks
+                I am Jake and I have been loving learning about and playing with HTML. I'm from Cape Town, South Africa
+                if you want to see what Cape Town looks
                 like click <a id="myLink" href="#capetown" onclick="toggleImage(event)">here.</a> This whole website
                 is about me so you will get to know me by exploring it! But this is just a brief introduction.
             </div>
