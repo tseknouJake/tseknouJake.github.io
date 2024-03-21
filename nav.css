@@ -23,6 +23,10 @@
   display: block;
   max-width: 100%;
   height: auto;
+  
+}
+
+#skateGif{
   cursor: pointer;
 }
 
@@ -54,7 +58,7 @@
 
 body {
   font-family: 'Kodchasan', sans-serif;
-  background-color: #ffffff;
+  background-color: #e8f0f7;
   display: flex;
   align-items: center;
   min-height: 100vh;

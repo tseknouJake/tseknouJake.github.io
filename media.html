@@ -85,7 +85,7 @@
             <div>
                
                 <h2>See what happens when you click the photo!</h2>
-                <img id="myImage" src="images-responses/skate.jpg" alt="egg skate" width="500" height="500" onclick="toggleGif()">
+                <img id="skateGif" src="images-responses/skate.jpg" alt="egg skate" width="500" height="500" onclick="toggleGif()">
             </div>
             
             <div class="clear"></div>
@@ -94,7 +94,7 @@
             
             <script>
                 function toggleGif() {
-                    var image = document.getElementById('myImage');
+                    var image = document.getElementById('skateGif');
                     if (image.src.match('skate.gif')) {
                         // If the current image is the GIF, change it to the static image
                         image.src = 'images-responses/skate.jpg';
