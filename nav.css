@@ -23,10 +23,10 @@
   display: block;
   max-width: 100%;
   height: auto;
-  
+
 }
 
-#skateGif{
+#skateGif {
   cursor: pointer;
 }
 
@@ -151,6 +151,7 @@ header {
 }
 
 .nav-toggle-label {
+  display: flex;
   position: absolute;
   top: 0;
   left: 0;
@@ -233,77 +234,146 @@ nav a:hover {
 }
 
 
-/* need to work on this part */
-/* 1050px */
-@media screen and (min-width: 1150px) {
-  .nav-toggle-label {
-    display: none;
-  }
 
+header {
+  display: grid;
+  /* grid-template-columns: 1fr auto minmax(800px, 3fr) 1fr; */
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+.logo {
+  grid-column: 2 / 3;
+}
+
+nav a:hover {
+  letter-spacing: unset;
+}
+
+nav {
+  /* all: unset; */
+  /* this might cause issues with older Edge versions */
+
+
+  /* add Edge support if needed */
+  position: relative;
+  text-align: left;
+  transition: none;
+  transform: scale(1, 1);
+  background: none;
+  top: initial;
+  left: initial;
+
+
+
+
+
+
+
+  grid-column: 3 / 4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  margin-left: 2em;
+  margin-bottom: 0;
+}
+
+nav a {
+  opacity: 1;
+  position: relative;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 4px;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  top: -.75em;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transition: transform ease-in-out 250ms;
+
+
+}
+
+nav a:hover::before {
+  transform: scale(1, 1);
+}
+
+
+
+/* my attempt to make a hamburger */
+
+.hamburger {
+display: none;
+}
+
+.bar {
+  height: 2px;
+  width: 27px;
+  background: black;
+  margin: 5px;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+@media(max-width: 1050px) {
 
   header {
-    display: grid;
-    grid-template-columns: 1fr auto minmax(800px, 3fr) 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    padding: 0 10px;
   }
 
   .logo {
-    grid-column: 2 / 3;
+    flex-grow: 1; /* Allows logo to take necessary space */
   }
 
-  nav a:hover {
-    letter-spacing: unset;
-  }
 
-  nav {
-    all: unset;
-    /* this might cause issues with older Edge versions */
-
-    /* add Edge support if needed */
-    /* position: relative;
-      text-align: left;
-      transition: none;
-      transform: scale(1,1);
-      background: none;
-      top: initial;
-      left: initial; */
-
-
-    grid-column: 3 / 4;
+  .nav, .nav ul {
+    width: 100%; /* Ensures nav takes full width of its container */
+    margin: 0; /* Resets margin */
+    padding: 0; /* Resets padding */
+    justify-content: center; /* This will center the nav items in a row flex container */
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    flex-direction: column; /* Makes sure nav items are stacked vertically */
+    align-items: center; /* Centers nav items horizontally */
+
   }
 
-  nav ul {
+  .nav-list {
+  list-style: none; /* Removes bullets */
+    padding: 0;
+    margin: 0; /* Removes default margin */
     display: flex;
+    flex-direction: column; /* Stacks links vertically */
+    align-items: center; /* Ensures links are centered within the nav list */
+    width: 100%; /* Ensures nav list takes full width for proper centering */
+    row-gap: 20px;
   }
 
-  nav li {
-    margin-left: 2em;
-    margin-bottom: 0;
+  .nav-link {
+    font-size: 12px;
   }
 
-  nav a {
-    opacity: 1;
-    position: relative;
-  }
 
-  nav a::before {
-    content: '';
+
+  .hamburger {
     display: block;
-    height: 4px;
-    background: rgb(255, 255, 255);
-    position: absolute;
-    top: -.75em;
-    left: 0;
-    right: 0;
-    transform: scale(0, 1);
-    transition: transform ease-in-out 250ms;
-
-
-  }
-
-  nav a:hover::before {
-    transform: scale(1, 1);
+    cursor: pointer;
   }
 }
